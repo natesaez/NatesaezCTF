@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Step_3</title>
+    <link rel="stylesheet" href="thirdhtml.css">
+    <style>
+        body {
+            -webkit-user-select: none;  /* Chrome, Safari, Opera */
+            -moz-user-select: none;     /* Firefox */
+            -ms-user-select: none;      /* Internet Explorer/Edge */
+            user-select: none;          /* Standard syntax */
+            margin: 0;
+        }
+    </style>
+ </head>
+ <body>
+    <!-- Content goes here. -->
+    <div id="dynamicContent"></div>
+
+    <script >
+        document.addEventListener("DOMContentLoaded", function () {
+            const encodedContent = "ZWFzeSF9";  // Correct Base64 encoding
+            
+            // Decode the base64 string
+            const decodedContent = atob(encodedContent);
+            
+            // Display the decoded content on the page
+            document.getElementById("dynamicContent").innerHTML = "<p style='color: rgb(255, 0, 0);'>" + "This is the last part: " + decodedContent + "<p>";
+        });
+    </script>
+ </body>
+ <footer>
+    <p style="color: rgb(255, 0, 0);">That's it! Let's put it all together now!</p>
+    <a style="color: rgb(255, 0, 0);" href="password.html">Next</a>
+ </footer>
+</html>

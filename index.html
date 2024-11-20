@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Step_1</title>
+    <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+    <h1>Welcome to my CTF challenge!</h1>
+    <p>I wish we could change the black background...</p>    
+    <img src="down.jpg" alt="Down" />
+    <style>
+        body {
+            -webkit-user-select: none;  /* Chrome, Safari, Opera */
+            -moz-user-select: none;     /* Firefox */
+            -ms-user-select: none;      /* Internet Explorer/Edge */
+            user-select: none;          /* Standard syntax */
+            margin: 0;
+        }
+    </style>
+ </body>
+ 
+ <footer>
+    <p style="color: rgb(0, 0, 0);">Here is the first part 
+        <div id="dynamicContent"></div>
+
+        <script >
+            document.addEventListener("DOMContentLoaded", function () {
+                const encodedContent = "cGljb0NURntUaGF0";  // Correct Base64 encoding
+                
+                // Decode the base64 string
+                const decodedContent = atob(encodedContent);
+                
+                // Display the decoded content on the page
+                document.getElementById("dynamicContent").innerHTML = "<p style='color: rgb(0, 0, 0);'>" + decodedContent + "_" + "<p>";
+            });
+        </script>
+    </p>
+    <p style="color: rgb(0, 0, 0);">Let's get the next part</p>
+    <a style="color: rgb(0, 0, 0);" href="next.html">Next</a>
+ </footer>
+</html>
+picoCTF{That_was_easy!}
